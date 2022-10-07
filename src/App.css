@@ -1,9 +1,39 @@
 @import "reset.css";
 
 body{
-  font-family : 'nbg', 'ë§‘ì€ ê³ ë”•', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+  font-family : 'nbg', '¸¼Àº °íµñ', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
   font-size : 1em;
   line-height: 1;
   min-width: 320px;
   overflow-x: hidden;
+}
+
+a{
+  /* text-decoration ¼Ó¼ºÀ» noneÀ¸·Î ÁöÁ¤ÇØ¼­ ÇÏÀÌÆÛÅØ½ºÆ®ÀÇ ¹ØÁÙ Á¦°Å */
+  text-decoration: none;
+}
+
+.topNav1{
+  width: 76px;
+}
+
+.topNav2{
+  width: 107px;
+  margin-left: 1px;
+  /* 
+    nav ¸Ş´º »çÀÌÀÇ ¼¼·Î¼± ±¸Çö ¹æ¹ı : 
+    1. navÀÇ background¸¦ »óÀ§ ¿ä¼ÒÀÇ »öº¸´Ù Â£Àº »öÀÇ img·Î ÁöÁ¤
+    2. ±× ÈÄ ¼¼·Î¼±ÀÌ ÇÊ¿äÇÑ ºÎºĞ¿¡ marginÀ» 1px·Î ÁöÁ¤ÇØÁØ´Ù.
+    3. ¸Ş´º »çÀÌ¿¡ °ø°£ÀÌ »ı±â¸é¼­ backgroundÀÇ »öÀÌ µå·¯³ª¸é¼­ ¼±ÀÌ »ı±è
+  */
+}
+
+.topNav3{
+  width: 181px;
+  margin-left: 1px;
+}
+
+.topNav4{
+  width : 97px;
+  margin-left: 1px;
 }
