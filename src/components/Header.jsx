@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
 
 const HeaderBlock = styled.div`
   background : #f6f5ef;
@@ -43,15 +44,53 @@ const TopNavLi = styled.li`
   float : left;
   height : 20px;
   color : #555;
-  // 왜 display : block을 사용하는 생각해보기
   display : block;
   // font 속성의 Avenir, Arial, gerogia는 글꼴을 지정해준 것
   // 쉼표로 여러 글꼴을 등록할 수 있다. 이 떄 맨 앞의 글꼴을 우선으로 적용시키고 앞의 글꼴이 사용자의 컴퓨터에 없으면 다음 글꼴 사용
   font : normal 13px Avenir, Arial, georgia;
 `
 
+const SerchArea = styled.p`
+  position : absolute;
+  display : block;
+  right : 54px;
+  top : 9px;
+  width : 34px;
+  height : 34px;
+  border : 1px #ccc solid;
+  border-radius : 5px;
+`
+
+const InputSerch = styled.input`
+  width : 0px;
+
+`
+const SerchButton = styled.a`
+  position : absolute;
+  top : 0;
+  right 0;
+  display : block;
+  width : 34px;
+  height : 34px;
+  cursor : pointer;
+  margin : 0;
+  padding : 0;
+`
+const SerchButtonImg = styled.img`
+  margin : auto;
+  potision : absolute;
+  top : 6px;
+  right : 7px;
+`
+
+
+
+
+
 
 function Header(){
+
+
 
     return(
         <HeaderBlock>
@@ -67,6 +106,11 @@ function Header(){
                     <TopNavLi className="topNav4"><a href="/">Find a Store</a></TopNavLi>
                   </TopNavUl>
                 </HeaderBlockInnerTopNav>
+                <SerchArea>
+                  <SerchButton href="/">
+                    <SerchButtonImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SerchButtonImg>
+                  </SerchButton>
+                </SerchArea>
             </HeaderBlockInner>
         </HeaderBlock>
     );
