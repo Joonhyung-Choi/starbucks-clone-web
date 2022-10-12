@@ -1,15 +1,17 @@
 @import "reset.css";
 
 body{
-  font-family : 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+  font-family : 'nbg', '???? ????', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
   font-size : 1em;
   line-height: 1;
   min-width: 320px;
   overflow-x: hidden;
 }
 
+
+
 a{
-  /* text-decoration 속성을 none으로 지정해서 하이퍼텍스트의 밑줄 제거 */
+  /* text-decoration ????? none???? ??????? ???????????? ???? ???? */
   text-decoration: none;
 }
 
@@ -20,12 +22,7 @@ a{
 .topNav2{
   width: 107px;
   margin-left: 1px;
-  /* 
-    nav 메뉴 사이의 세로선 구현 방법 : 
-    1. nav의 background를 상위 요소의 색보다 짙은 색의 img로 지정
-    2. 그 후 세로선이 필요한 부분에 margin을 1px로 지정해준다.
-    3. 메뉴 사이에 공간이 생기면서 background의 색이 드러나면서 선이 생김
-  */
+
 }
 
 .topNav3{
@@ -36,4 +33,18 @@ a{
 .topNav4{
   width : 97px;
   margin-left: 1px;
+}
+
+
+p.searchButtonClicked{
+  width : 182px;
+
+}
+
+input.searchButtonClicked{
+  width : 143px;
+}
+
+nav.searchButtonClicked{
+  right : 232px;
 }
