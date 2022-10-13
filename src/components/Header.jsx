@@ -116,12 +116,9 @@ const BottomNavUl = styled.ul`
 const BottomNavLi = styled.li`
   font : normal 13px Avenir, Arial, georgia;
   text-align : center;
-  color : #333;
   display : block;
   float : left;
   height : 100%;
-
-
 `
 
 
