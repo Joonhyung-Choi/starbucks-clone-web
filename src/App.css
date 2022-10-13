@@ -36,6 +36,10 @@ a{
   margin-left: 1px;
 }
 
+.topNavA{
+  color : #333333;
+}
+
 
 p.searchButtonClicked{
   width : 182px;

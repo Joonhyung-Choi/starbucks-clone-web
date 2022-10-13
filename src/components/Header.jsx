@@ -145,10 +145,10 @@ function Header(){
                 </HeaderBlockInnerLogo>
                 <HeaderTopNav className={isClicked ? 'searchButtonClicked' : ''}>
                   <TopNavUl>
-                    <TopNavLi className="topNav1"><a href="/">Sign in</a></TopNavLi>
-                    <TopNavLi className="topNav2"><a href="/">My Starbucks</a></TopNavLi>
-                    <TopNavLi className="topNav3"><a href="/">Customer Service & Ideas</a></TopNavLi>
-                    <TopNavLi className="topNav4"><a href="/">Find a Store</a></TopNavLi>
+                    <TopNavLi className="topNav1"><a className="topNavA" href="/">Sign in</a></TopNavLi>
+                    <TopNavLi className="topNav2"><a className="topNavA" href="/">My Starbucks</a></TopNavLi>
+                    <TopNavLi className="topNav3"><a className="topNavA" href="/">Customer Service & Ideas</a></TopNavLi>
+                    <TopNavLi className="topNav4"><a className="topNavA" href="/">Find a Store</a></TopNavLi>
                   </TopNavUl>
                 </HeaderTopNav>
                 <SerchArea className={isClicked ? 'searchButtonClicked' : ''}>
