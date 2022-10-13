@@ -11,7 +11,7 @@ const HeaderBlock = styled.div`
   top : 0;
   width: 100%;
   height : 120px;
-  z-index : 99;
+  z-index : 10;
 `
 
 const HeaderBlockInner = styled.div`
@@ -22,7 +22,8 @@ const HeaderBlockInner = styled.div`
 `
 const HeaderBlockInnerLogo = styled.a`
   position : absolute;
-  top : 20%;
+  left : 0;
+  top : 22px;
 `
 
 const HeaderTopNav = styled.nav`
@@ -44,10 +45,14 @@ const TopNavLi = styled.li`
   float : left;
   height : 20px;
   color : #555;
-  display : block;
-  // font ????? Avenir, Arial, gerogia?? ????? ???????? ??
-  // ????? ???? ????? ????? ?? ???. ?? ?? ?? ???? ????? ?��???? ???????? ???? ????? ??????? ?????? ?????? ???? ??? ???
+  
+  // font 속성 지정시 폰트를 여러개 지정해주면 먼저 선언된(왼쪽부터) 글꼴이 우선 적용됨
+  // 만약 컴퓨터에 글꼴이 없다면 다음 글꼴 적용
   font : normal 13px Avenir, Arial, georgia;
+  & : hover{
+    text-decoration: underline;
+    text-decoration-color : #555;
+  }
 `
 
 const SerchArea = styled.p`
@@ -96,6 +101,27 @@ const HeaderBottomNav = styled.nav`
   height : 66px;
   width : 100%;
   position : absolute;
+  bottom : 0;
+`
+
+const BottomNavUl = styled.ul`
+  list-style : none;
+  position : absolute;
+  right : 0;
+  height : 100%;
+  
+
+`
+
+const BottomNavLi = styled.li`
+  font : normal 13px Avenir, Arial, georgia;
+  text-align : center;
+  color : #333;
+  display : block;
+  float : left;
+  height : 100%;
+
+
 `
 
 
@@ -135,7 +161,16 @@ function Header(){
                     <SerchButtonImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SerchButtonImg>
                   </SerchButton>
                 </SerchArea>
-
+                <HeaderBottomNav>
+                  <BottomNavUl>
+                    <BottomNavLi className="bottomNav1"><a className="bottomNavA" href="/">COFFEE</a></BottomNavLi>
+                    <BottomNavLi className="bottomNav2"><a className="bottomNavA" href="/">MENU</a></BottomNavLi>
+                    <BottomNavLi className="bottomNav3"><a className="bottomNavA" href="/">STORE</a></BottomNavLi>
+                    <BottomNavLi className="bottomNav4"><a className="bottomNavA" href="/">RESPONSIBILITY</a></BottomNavLi>
+                    <BottomNavLi className="bottomNav5"><a className="bottomNavA" href="/">STARBUCKS REWARDS</a></BottomNavLi>
+                    <BottomNavLi className="bottomNav6"><a className="bottomNavA" href="/">WHAT'S NEW</a></BottomNavLi>
+                  </BottomNavUl>
+                </HeaderBottomNav>
             </HeaderBlockInner>
         </HeaderBlock>
     );

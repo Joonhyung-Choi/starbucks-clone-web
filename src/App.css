@@ -13,6 +13,7 @@ body{
 a{
   /* text-decoration ????? none???? ??????? ???????????? ???? ???? */
   text-decoration: none;
+  
 }
 
 .topNav1{
@@ -47,4 +48,45 @@ input.searchButtonClicked{
 
 nav.searchButtonClicked{
   right : 232px;
+}
+
+.bottomNav1{
+  width : 89px;
+
+}
+
+.bottomNav2{
+  width : 73px;
+}
+
+.bottomNav3{
+  width : 79px;
+}
+
+.bottomNav4{
+  width : 153px;
+  
+}
+
+.bottomNav5{
+  width : 225px;
+
+}
+
+.bottomNav6{
+  width : 131px;
+}
+
+.bottomNavA{
+  height: 56px;
+  width : 100%;
+  display: block;
+  padding-top: 10px;
+}
+
+.bottomNavA:hover{
+  text-decoration : underline;
+  text-decoration-color : #669900;
+  background : #2C2A29;
+  color : #669900;
 }
