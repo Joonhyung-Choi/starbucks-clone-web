@@ -2,6 +2,63 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 
+
+
+
+
+
+function Header(){
+
+  const[isClicked, setIsClicked] = useState(false);
+  function onClickSerchButton(){
+    if(isClicked === false){
+      setIsClicked(true)
+    } else {
+      
+    }
+  }
+
+
+
+  return (
+    <HeaderBlock>
+      <HeaderBlockInner>
+        <HeaderBlockInnerLogo href="/">
+          <img src="https://www.starbucks.co.kr/common/img/common/logo.png" alt="" />
+        </HeaderBlockInnerLogo>
+        <HeaderTopNav className={isClicked ? 'searchButtonClicked' : ''}>
+          <TopNavUl>
+            <TopNavLi className="topNav1"><a className="topNavA" href="/">Sign in</a></TopNavLi>
+            <TopNavLi className="topNav2"><a className="topNavA" href="/">My Starbucks</a></TopNavLi>
+            <TopNavLi className="topNav3"><a className="topNavA" href="/">Customer Service & Ideas</a></TopNavLi>
+            <TopNavLi className="topNav4"><a className="topNavA" href="/">Find a Store</a></TopNavLi>
+          </TopNavUl>
+        </HeaderTopNav>
+        <SerchArea className={isClicked ? 'searchButtonClicked' : ''}>
+          <InputSerch className={isClicked ? 'searchButtonClicked' : ''} type='text' placeholder="ê²€ìƒ‰">
+          </InputSerch>
+          <SerchButton onClick={onClickSerchButton}>
+            <SerchButtonImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SerchButtonImg>
+          </SerchButton>
+        </SerchArea>
+        <HeaderBottomNav>
+          <BottomNavUl>
+            <BottomNavLi className="bottomNav1"><a className="bottomNavA" href="/">COFFEE</a></BottomNavLi>
+            <BottomNavLi className="bottomNav2"><a className="bottomNavA" href="/">MENU</a></BottomNavLi>
+            <BottomNavLi className="bottomNav3"><a className="bottomNavA" href="/">STORE</a></BottomNavLi>
+            <BottomNavLi className="bottomNav4"><a className="bottomNavA" href="/">RESPONSIBILITY</a></BottomNavLi>
+            <BottomNavLi className="bottomNav5"><a className="bottomNavA" href="/">STARBUCKS REWARDS</a></BottomNavLi>
+            <BottomNavLi className="bottomNav6"><a className="bottomNavA" href="/">WHAT'S NEW</a></BottomNavLi>
+          </BottomNavUl>
+        </HeaderBottomNav>
+      </HeaderBlockInner>
+    </HeaderBlock>
+  );
+}
+
+export default Header;
+
+
 const HeaderBlock = styled.div`
   background : #f6f5ef;
   border-bottom : 1px solid #e5e5e5;
@@ -46,8 +103,8 @@ const TopNavLi = styled.li`
   height : 20px;
   color : #555;
   
-  // font ?†?„± ì§?? •?‹œ ?°?Š¸ë¥? ?—¬?Ÿ¬ê°? ì§?? •?•´ì£¼ë©´ ë¨¼ì?? ?„ ?–¸?œ(?™¼ìª½ë???„°) ê¸?ê¼´ì´ ?š°?„  ? ?š©?¨
-  // ë§Œì•½ ì»´í“¨?„°?— ê¸?ê¼´ì´ ?—†?‹¤ë©? ?‹¤?Œ ê¸?ê¼? ? ?š©
+  // font ?ëƒ½?ê½¦ ï§??ì ™?ë–† ?ë£¿?ë“ƒç‘œ? ?ë¿¬?ìœ­åª›? ï§??ì ™?ë¹äºŒì‡°ãˆƒ ç™’ì‡±?? ?ê½‘?ë¼µ?ë§‚(?ì‡Šï§Ÿìˆ???ê½£) æ¹²?ç‘—ëŒì”  ?ìŠ¦?ê½‘ ?ìŸ»?ìŠœ?ë§–
+  // ï§ëš¯ë¹Ÿ è€ŒëŒ„ë²‚?ê½£?ë¿‰ æ¹²?ç‘—ëŒì”  ?ë¾¾?ë–ï§? ?ë–?ì“¬ æ¹²?ç‘—? ?ìŸ»?ìŠœ
   font : normal 13px Avenir, Arial, georgia;
   & : hover{
     text-decoration: underline;
@@ -120,57 +177,3 @@ const BottomNavLi = styled.li`
   float : left;
   height : 100%;
 `
-
-
-
-
-function Header(){
-
-  const[isClicked, setIsClicked] = useState(false);
-  function onClickSerchButton(){
-    if(isClicked === false){
-      setIsClicked(true)
-    } else {
-      
-    }
-  }
-
-
-
-  return (
-    <HeaderBlock>
-      <HeaderBlockInner>
-        <HeaderBlockInnerLogo href="/">
-          <img src="https://www.starbucks.co.kr/common/img/common/logo.png" alt="" />
-        </HeaderBlockInnerLogo>
-        <HeaderTopNav className={isClicked ? 'searchButtonClicked' : ''}>
-          <TopNavUl>
-            <TopNavLi className="topNav1"><a className="topNavA" href="/">Sign in</a></TopNavLi>
-            <TopNavLi className="topNav2"><a className="topNavA" href="/">My Starbucks</a></TopNavLi>
-            <TopNavLi className="topNav3"><a className="topNavA" href="/">Customer Service & Ideas</a></TopNavLi>
-            <TopNavLi className="topNav4"><a className="topNavA" href="/">Find a Store</a></TopNavLi>
-          </TopNavUl>
-        </HeaderTopNav>
-        <SerchArea className={isClicked ? 'searchButtonClicked' : ''}>
-          <InputSerch className={isClicked ? 'searchButtonClicked' : ''} type='text' placeholder="?†µ?•©ê²??ƒ‰">
-          </InputSerch>
-          <SerchButton onClick={onClickSerchButton}>
-            <SerchButtonImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SerchButtonImg>
-          </SerchButton>
-        </SerchArea>
-        <HeaderBottomNav>
-          <BottomNavUl>
-            <BottomNavLi className="bottomNav1"><a className="bottomNavA" href="/">COFFEE</a></BottomNavLi>
-            <BottomNavLi className="bottomNav2"><a className="bottomNavA" href="/">MENU</a></BottomNavLi>
-            <BottomNavLi className="bottomNav3"><a className="bottomNavA" href="/">STORE</a></BottomNavLi>
-            <BottomNavLi className="bottomNav4"><a className="bottomNavA" href="/">RESPONSIBILITY</a></BottomNavLi>
-            <BottomNavLi className="bottomNav5"><a className="bottomNavA" href="/">STARBUCKS REWARDS</a></BottomNavLi>
-            <BottomNavLi className="bottomNav6"><a className="bottomNavA" href="/">WHAT'S NEW</a></BottomNavLi>
-          </BottomNavUl>
-        </HeaderBottomNav>
-      </HeaderBlockInner>
-    </HeaderBlock>
-  );
-}
-
-export default Header;
