@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { IoIosAddCircleOutline, IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io"; 
 
@@ -6,7 +6,18 @@ import { IoIosAddCircleOutline, IoIosArrowDropdown, IoIosArrowDropup } from "rea
 
 
 function Notice() {
+  const [promotionButton, setPromotionButton] = useState(true);
+  const [openCloseIcon, setOpenCloseIcon] = useState(<IoIosArrowDropdown/>)
 
+  function promotionClicked(){
+    if(promotionButton === true){
+      setOpenCloseIcon(<IoIosArrowDropup className="OpenCloseButton"/>);
+      setPromotionButton(false);
+    } else {
+      setOpenCloseIcon(<IoIosArrowDropdown className="OpenCloseButton"/>);
+      setPromotionButton(true);
+    }
+  }
 
 
   return (
@@ -19,12 +30,13 @@ function Notice() {
         </NoticeInnerPlusIcon>
       </NoticeDiv>
       <PromotionDiv>
-        <PromotionInnerA href="/">
+        <PromotionInnerA onClick = {promotionClicked}>
           <PromotionInnerP>
             스타벅스 프로모션
           </PromotionInnerP>
-          
-
+          <PromotionOpenCloseP>
+            {openCloseIcon}
+          </PromotionOpenCloseP>
         </PromotionInnerA>
       </PromotionDiv>
     </NoticeMainDiv>
@@ -43,15 +55,11 @@ const NoticeDiv = styled.div`
   width: 50%;
   height: 62px;
   float: left;
+  
 
 `
 
-const PromotionDiv = styled.div`
-  width: 45%;
-  height: 62px;
-  background-color: white;
-  float: right;
-`
+
 
 const NoticeInnerP = styled.p`
   position: absolute;
@@ -62,7 +70,6 @@ const NoticeInnerP = styled.p`
   width: 100px;
   height: 62px;
   font : normal 17px Avenir, Arial, georgia;
-
   line-height: 57px;
 `
 
@@ -75,9 +82,9 @@ const NoticeInnerA = styled.a`
   width: 200px;
   height: 62px;
   font : normal 14px Avenir, Arial, georgia;
-
   line-height: 60px;
-
+  
+  
 `
 
 const NoticeInnerPlusIcon = styled.a`
@@ -88,19 +95,36 @@ const NoticeInnerPlusIcon = styled.a`
   height: 62px;
   position: absolute;
   left: 51.5%;
+`
 
+const PromotionDiv = styled.div`
+  position: relative;
+  width: 45%;
+  height: 62px;
+  background-color: white;
+  float: right;
 `
 
 const PromotionInnerA = styled.a`
-  display: block;
   position: absolute;
-  right: 28%;
+  width: 100%;
   color : #666;
   font : bold 17px Avenir, Arial, georgia;
   line-height: 63px;
-`
-
-const PromotionInnerP = styled.p`
+  cursor: pointer;
+  
   
 `
 
+const PromotionInnerP = styled.p`
+  display: block;
+  position: absolute;
+  right: 60%;
+  
+`
+const PromotionOpenCloseP = styled.p`
+  display: block;
+  position: absolute;
+  right : 49%;
+  padding-top: 8px;
+`

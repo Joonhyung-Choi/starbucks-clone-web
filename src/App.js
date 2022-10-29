@@ -4,6 +4,7 @@ import Header from './components/Header';
 import PageMain from './components/PageMain';
 import styled from 'styled-components';
 import Notice from './components/Notice';
+import StarbucksRewards from './components/StarbucksRewards';
 
 const HeaderBackDiv = styled.div`
   height : 120px;
@@ -20,6 +21,7 @@ function App() {
       </HeaderBackDiv>
       <PageMain/>
       <Notice/>
+      <StarbucksRewards/>
     </div>
   );
 }
