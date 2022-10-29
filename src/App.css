@@ -1,6 +1,6 @@
 @import "reset.css";
 
-.app{
+body{
   font-family : 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
   font-size : 1em;
   line-height: 1;
@@ -94,4 +94,21 @@ nav.searchButtonClicked{
   text-decoration-color : #669900;
   background : #2C2A29;
   color : #669900;
+}
+
+.moreInfoA:hover{
+  background: white;
+  color : #666;
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.noticeInnerA:hover{
+  text-decoration: underline;
+}
+
+.plusIcon{
+  color: white;
+  font-size: 43px;
+
 }

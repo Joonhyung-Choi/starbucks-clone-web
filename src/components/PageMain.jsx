@@ -16,7 +16,7 @@ function PageMain() {
       <SloganDiv>
         <SloganImg src={sloganImgSrc} />
         <MoreInfoDiv>
-          <MoreInfoA href="/">자세히 보기</MoreInfoA>
+          <MoreInfoA className="moreInfoA" href="/">자세히 보기</MoreInfoA>
         </MoreInfoDiv>
       </SloganDiv>
       <ProductImgDiv>
@@ -45,18 +45,18 @@ const SloganDiv = styled.div`
 `
 
 
-const SloganImg = styled.img`
-  position : absolute;
-  top : 20%;
-
-`
-
 const MoreInfoDiv = styled.div`
   position : absolute;
   top : 48.72%;
   width : 317px;
   height : 38px;
   
+`
+
+const SloganImg = styled.img`
+  position : absolute;
+  top : 20%;
+
 `
 
 const MoreInfoA = styled.a`
@@ -72,7 +72,7 @@ const MoreInfoA = styled.a`
   font-size : 15px;
   box-sizing : border-box;
   font-family : 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
-
+  
 `
 
 const ProductImgDiv = styled.div`
