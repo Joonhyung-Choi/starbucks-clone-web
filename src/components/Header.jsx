@@ -35,7 +35,7 @@ function Header(){
           </TopNavUl>
         </HeaderTopNav>
         <SerchArea className={isClicked ? 'searchButtonClicked' : ''}>
-          <InputSerch className={isClicked ? 'searchButtonClicked' : ''} type='text' placeholder="검색">
+          <InputSerch className={isClicked ? 'searchButtonClicked' : ''} type='text' placeholder="통합검색">
           </InputSerch>
           <SerchButton onClick={onClickSerchButton}>
             <SerchButtonImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SerchButtonImg>
