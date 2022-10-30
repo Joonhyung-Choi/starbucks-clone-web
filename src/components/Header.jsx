@@ -89,7 +89,7 @@ const HeaderTopNav = styled.nav`
   right : 93px;
   top : 18px;
   height : 20px;
-  width 464px;
+  width : 464px;
   transition : all 0.75s;
 `
 const TopNavUl = styled.ul`

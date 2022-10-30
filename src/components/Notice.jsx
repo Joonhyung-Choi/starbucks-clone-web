@@ -7,14 +7,14 @@ import { IoIosAddCircleOutline, IoIosArrowDropdown, IoIosArrowDropup } from "rea
 
 function Notice() {
   const [promotionButton, setPromotionButton] = useState(true);
-  const [openCloseIcon, setOpenCloseIcon] = useState(<IoIosArrowDropdown/>)
+  const [openCloseIcon, setOpenCloseIcon] = useState(<IoIosArrowDropdown size="45"/>)
 
   function promotionClicked(){
     if(promotionButton === true){
-      setOpenCloseIcon(<IoIosArrowDropup className="OpenCloseButton"/>);
+      setOpenCloseIcon(<IoIosArrowDropup className="OpenCloseButton" size="45"/>);
       setPromotionButton(false);
     } else {
-      setOpenCloseIcon(<IoIosArrowDropdown className="OpenCloseButton"/>);
+      setOpenCloseIcon(<IoIosArrowDropdown className="OpenCloseButton" size="45"/>);
       setPromotionButton(true);
     }
   }
@@ -26,7 +26,7 @@ function Notice() {
         <NoticeInnerP>공지사항</NoticeInnerP>
         <NoticeInnerA className="noticeInnerA" href="/">시스템 개선 및 점검 안내</NoticeInnerA>
         <NoticeInnerPlusIcon href="/">
-          <IoIosAddCircleOutline className="plusIcon"></IoIosAddCircleOutline>
+          <IoIosAddCircleOutline size="45" color="white"></IoIosAddCircleOutline>
         </NoticeInnerPlusIcon>
       </NoticeDiv>
       <PromotionDiv>
