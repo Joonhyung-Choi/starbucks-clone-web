@@ -35,27 +35,45 @@ const PageMainDiv = styled.div`
   height : 646px;
   background-image : url(https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_bg.jpg);
   background-position : center;
+  display: flex;
+  flex-direction: row;
+  padding-left : 10%;
   
 `
 const SloganDiv = styled.div`
-  width : 317px;
+  width : 24%;
   height: 100%;
-  left: 14.75%;
-  position: absolute;
+
+  /* left: 14.75%; */
+  position: relative;
+  min-width: 317px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right:4.5%;
+
+`
+const ProductImgDiv = styled.div`
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 70%;
+  /* right: 23.3%; */
+  justify-content: flex-end;
 `
 
-
 const MoreInfoDiv = styled.div`
+  display: flex;
   position : absolute;
-  top : 48.72%;
+  top : 71.5%;
   width : 317px;
   height : 38px;
   
 `
 
 const SloganImg = styled.img`
+  
   position : absolute;
-  top : 20%;
+  top : 30%;
 
 `
 
@@ -75,25 +93,20 @@ const MoreInfoA = styled.a`
   
 `
 
-const ProductImgDiv = styled.div`
-  height: 646px;
-  width: 800px;
-  position: absolute;
-  right: 23.3%;
-`
+
 
 const ProductImg1 = styled.img`
   position: absolute;
   top : 16.35%;
-  left : 2%;
+  left : 0%;
 `
 const ProductImg2 = styled.img`
   position: absolute;
   top : 22%;
-  left: 30%;
+  left: 223px;
 `
 const ProductImg3 = styled.img`
   position: absolute;
   top : 18.1%;
-  left: 70.3%;
+  left: 540px;
 `
