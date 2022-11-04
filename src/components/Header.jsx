@@ -140,7 +140,7 @@ const InputSerch = styled.input`
 const SerchButton = styled.a`
   position : absolute;
   top : 0;
-  right 0;
+  right : 0;
   display : block;
   width : 34px;
   height : 34px;

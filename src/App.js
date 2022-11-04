@@ -4,7 +4,8 @@ import PageMain from './components/PageMain';
 import styled from 'styled-components';
 import Notice from './components/Notice';
 import StarbucksRewards from './components/StarbucksRewards';
-import ProductAdvertisement from './components/ProductAdvertisement';
+import ProductAdvertisement1 from './components/ProductAdvertisement1';
+import ProductAdvertisement2 from './components/ProductAdvertisement2';
 
 
 
@@ -24,7 +25,9 @@ function App() {
       <PageMain/>
       <Notice/>
       <StarbucksRewards/>
-      <ProductAdvertisement/>
+      <ProductAdvertisement1/>
+      <ProductAdvertisement2/>
+
     </div>
   );
 }

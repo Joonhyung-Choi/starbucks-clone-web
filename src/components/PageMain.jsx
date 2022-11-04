@@ -36,29 +36,25 @@ const PageMainDiv = styled.div`
   background-image : url(https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_bg.jpg);
   background-position : center;
   display: flex;
-  flex-direction: row;
   padding-left : 10%;
   
 `
 const SloganDiv = styled.div`
   width : 24%;
   height: 100%;
-
-  /* left: 14.75%; */
   position: relative;
   min-width: 317px;
   display: flex;
-  justify-content: flex-end;
+  // 화면크기를 줄였을때 가운데에서 모이게 하도록 설정
+  justify-content: right;
   margin-right:4.5%;
 
 `
 const ProductImgDiv = styled.div`
-  display: flex;
   position: relative;
   height: 100%;
   width: 70%;
-  /* right: 23.3%; */
-  justify-content: flex-end;
+  display: flex;
 `
 
 const MoreInfoDiv = styled.div`
@@ -71,10 +67,8 @@ const MoreInfoDiv = styled.div`
 `
 
 const SloganImg = styled.img`
-  
   position : absolute;
   top : 30%;
-
 `
 
 const MoreInfoA = styled.a`
