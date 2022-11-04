@@ -89,7 +89,12 @@ const MoreInfoA = styled.a`
   line-height : 34px;
   font-size : 15px;
   box-sizing : border-box;
-  font-family : 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+  &:hover{
+    background: white;
+    color : #666;
+    text-decoration: underline;
+    transition: 0.5s;
+  }
   
 `
 

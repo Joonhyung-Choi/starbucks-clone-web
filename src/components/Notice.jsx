@@ -75,15 +75,16 @@ const NoticeInnerP = styled.p`
 
 const NoticeInnerA = styled.a`
   position: absolute;
-  left: 24%;
+  left: 25%;
   display: block;
   text-align: center;
   color: white;
   width: 200px;
   height: 62px;
-  font : normal 14px Avenir, Arial, georgia;
   line-height: 60px;
-  
+  &:hover{
+    text-decoration: underline;
+  }
   
 `
 
@@ -108,12 +109,9 @@ const PromotionDiv = styled.div`
 const PromotionInnerA = styled.a`
   position: absolute;
   width: 100%;
-  color : #666;
   font : bold 17px Avenir, Arial, georgia;
   line-height: 63px;
   cursor: pointer;
-  
-  
 `
 
 const PromotionInnerP = styled.p`
