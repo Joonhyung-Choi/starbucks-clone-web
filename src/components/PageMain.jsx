@@ -43,8 +43,8 @@ const SloganDiv = styled.div`
   width : 24%;
   height: 100%;
   position: relative;
-  min-width: 317px;
   display: flex;
+
   // 화면크기를 줄였을때 가운데에서 모이게 하도록 설정
   justify-content: right;
   margin-right:4.5%;

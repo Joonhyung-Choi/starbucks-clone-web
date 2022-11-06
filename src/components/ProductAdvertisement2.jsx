@@ -10,7 +10,7 @@ function ProductAdvertisement2(){
                 <ProductLogoImg src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_title.png"/>
             </ProductLogoDiv>
             <InfoButtonDiv>
-                <InformationButton>자세히 보기</InformationButton>
+                <InformationButton href="/">자세히 보기</InformationButton>
             </InfoButtonDiv>
         </ProductAdvertisementDiv2>
     );
