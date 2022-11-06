@@ -96,12 +96,6 @@ nav.searchButtonClicked{
   color : #669900;
 }
 
-/* .plusIcon{
-  color: white;
-  font-size: 43px;
-
-} */
-
-/* .OpenCloseButton{
-  font-size: 43px;
-} */
+.clickedPromotionButton{
+  transform: rotate(180deg);
+}

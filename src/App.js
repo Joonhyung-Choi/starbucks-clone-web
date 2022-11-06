@@ -6,6 +6,7 @@ import Notice from './components/Notice';
 import StarbucksRewards from './components/StarbucksRewards';
 import ProductAdvertisement1 from './components/ProductAdvertisement1';
 import ProductAdvertisement2 from './components/ProductAdvertisement2';
+import ProductAdvertisement3 from './components/ProductAdvertisement3';
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <StarbucksRewards/>
       <ProductAdvertisement1/>
       <ProductAdvertisement2/>
+      <ProductAdvertisement3/>
 
     </div>
   );

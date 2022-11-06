@@ -3,10 +3,6 @@ import styled from "styled-components";
 import { useState } from "react";
 
 
-
-
-
-
 function Header(){
 
   const[isClicked, setIsClicked] = useState(false);
@@ -68,7 +64,7 @@ const HeaderBlock = styled.div`
   top : 0;
   width: 100%;
   height : 120px;
-  z-index : 10;
+  z-index : 99;
 `
 
 const HeaderBlockInner = styled.div`

@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { IoIosAddCircleOutline, IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io"; 
-
+import { IoIosAddCircleOutline, IoIosArrowDropdown} from "react-icons/io"; 
 
 
 
 function Notice() {
   const [promotionButton, setPromotionButton] = useState(true);
-  const [openCloseIcon, setOpenCloseIcon] = useState(<IoIosArrowDropdown size="45"/>)
 
   function promotionClicked(){
     if(promotionButton === true){
-      setOpenCloseIcon(<IoIosArrowDropup className="OpenCloseButton" size="45"/>);
       setPromotionButton(false);
     } else {
-      setOpenCloseIcon(<IoIosArrowDropdown className="OpenCloseButton" size="45"/>);
       setPromotionButton(true);
     }
   }
@@ -35,7 +31,7 @@ function Notice() {
             스타벅스 프로모션
           </PromotionInnerP>
           <PromotionOpenCloseP>
-            {openCloseIcon}
+            <IoIosArrowDropdown className={promotionButton ? "" : "clickedPromotionButton"} size="45"/>
           </PromotionOpenCloseP>
         </PromotionInnerA>
       </PromotionDiv>
