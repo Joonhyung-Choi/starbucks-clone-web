@@ -7,7 +7,11 @@ function ProductAdvertisement2(){
             <BackgroundDivLeft/>
             <BackgroundDivRight/>
             <ProductLogoDiv>
+                <ProductLogoImg src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_title.png"/>
             </ProductLogoDiv>
+            <InfoButtonDiv>
+                <InformationButton>자세히 보기</InformationButton>
+            </InfoButtonDiv>
         </ProductAdvertisementDiv2>
     );
 }
@@ -61,7 +65,43 @@ const BackgroundDivRight = styled.div`
 `
 
 const ProductLogoDiv = styled.div`
-    height: 75%;
+    position: relative;
+    height: 57%;
     width: 100%;
-    background-color: #3e8842;
+    padding: 115px 0 0 400px;
+    box-sizing: border-box;
+
+`
+
+const ProductLogoImg = styled.img`
+
+`
+
+const InfoButtonDiv = styled.div`
+    position: relative;
+    height: 18.5%;
+    width: 100%;
+    padding: 35px 0 0 660px;
+    box-sizing: border-box;
+
+`
+
+const InformationButton = styled.a`
+  display : block;
+  width : 129px;
+  height : 100%;
+  border : #b9813e solid 2px;
+  border-radius : 5px;
+  color : #b9813e;
+  text-align : center;
+  line-height : 34px;
+  font-size : 15px;
+  box-sizing : border-box;
+  &:hover{
+    background: #b9813e;
+    color : white;
+    text-decoration: underline;
+    transition: 0.5s;
+  }
+  
 `

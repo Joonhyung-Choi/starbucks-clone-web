@@ -58,6 +58,7 @@ const BackgroundDiv2 = styled.div`
 `
 
 const AdvertiseProductDiv = styled.div`
+    position: relative;
     margin: 0 auto;
     width: 1050px;
     height: 100%;

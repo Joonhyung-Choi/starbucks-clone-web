@@ -16,3 +16,4 @@ const ProductAdvertisementDiv3 = styled.div`
     height: 1000px;
     background-color: #2c5e8d;
 `
+
