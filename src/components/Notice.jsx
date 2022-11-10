@@ -15,6 +15,7 @@ function Notice() {
     }
   }
 
+  
 
   return (
     <NoticeMainDiv>
@@ -30,7 +31,7 @@ function Notice() {
           <PromotionInnerP>
             스타벅스 프로모션
           </PromotionInnerP>
-          <PromotionOpenCloseP>
+          <PromotionOpenCloseP >
             <IoIosArrowDropdown className={promotionButton ? "" : "clickedPromotionButton"} size="45"/>
           </PromotionOpenCloseP>
         </PromotionInnerA>

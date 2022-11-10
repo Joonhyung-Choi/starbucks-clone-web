@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
-function ProductAdvertisement1(){
+function ProductAdvertisement1(props){
+
+    
+      
+    
+    
+
     return (
         <ProductAdvertisementDiv1>
             <BackgroundDiv1/>
@@ -76,7 +82,7 @@ const ProductImmageDiv = styled.div`
 `
 
 const ImmageDivInnerImg = styled.img`
-    z-index: 10;
+
 `
 
 
