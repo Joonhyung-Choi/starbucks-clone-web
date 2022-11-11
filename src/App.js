@@ -18,32 +18,35 @@ function App() {
   let advertiseState1 = false;
   let advertiseState2 = false;
 
-  const pageMainObserver = new IntersectionObserver(entry =>{
-    entry.forEach(ObserverEntry => {
-
-      if(ObserverEntry.isIntersecting){
+  const pageMainObserver = new IntersectionObserver(entries =>{
+    entries.forEach(entry=> {
+      if(entry.isIntersecting){
         pageMainState = true;
         advertiseState1 = false;
         advertiseState2 = false;
+        advertiseObserver1.observe(document.querySelector(".advertiseSection1"));
+        advertiseObserver2.observe(document.querySelector(".advertiseSection2"));
         console.log(pageMainState, advertiseState1, advertiseState2, "1111");
       }
     })
   }, {threshold: 1})
 
-  const advertiseObserver1 = new IntersectionObserver(entry => {
-    entry.forEach(ObserverEntry => {
-      if(ObserverEntry.isIntersecting){
+  const advertiseObserver1 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
         pageMainState = false;
         advertiseState1 = true;
+        advertiseObserver1.unobserve(entry.target);
         console.log(pageMainState, advertiseState1, advertiseState2, "2222");
       }
     })
   }, {threshold: 0.5})
 
-  const advertiseObserver2 = new IntersectionObserver(entry => {
-    entry.forEach(ObserverEntry => {
-      if(ObserverEntry.isIntersecting){
+  const advertiseObserver2 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
         advertiseState2 = true;
+        advertiseObserver2.unobserve(entry.target);
         console.log(pageMainState, advertiseState1, advertiseState2, "3333");
       }
     })
@@ -53,25 +56,7 @@ function App() {
 
   useEffect(() => {
     pageMainObserver.observe(document.querySelector(".pageMainSection"));
-    advertiseObserver1.observe(document.querySelector(".advertiseSection1"));
-    advertiseObserver2.observe(document.querySelector(".advertiseSection2"));
-    if(pageMainState === true && advertiseState1 === false && advertiseState2 === false){
-      advertiseObserver1.observe(document.querySelector(".advertiseSection1"));
-      advertiseObserver2.observe(document.querySelector(".advertiseSection2"));
-    }
-
-
-    if(advertiseState1 === true){
-      advertiseObserver1.unobserve(document.querySelector(".advertiseSection1"));
-      console.log("unobserve1")
-    }
-
-    if(advertiseState2 === true){
-      advertiseObserver2.unobserve(document.querySelector(".advertiseSection2"));
-      console.log("unobserve2")
-    }
-
-  })
+  },[])
   
 
   return (
