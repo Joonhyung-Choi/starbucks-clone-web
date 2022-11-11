@@ -1,9 +1,37 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-function ProductAdvertisement2(){
+function ProductAdvertisement2(props){
+
+    const [advertiseState, setAcvertiseState] = useState(false);
+    const advertiseObserver2 = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+                setAcvertiseState(true);
+                console.log(advertiseState, 2222)
+                advertiseObserver2.unobserve(entry.target);
+            }
+            else if(props.pageMainState === true && !entry.isIntersecting){
+                setAcvertiseState(false);
+                console.log(advertiseState, 2222)
+            }
+        })
+    }, {threshold:0.3})
+      
+    useEffect(() =>{
+        advertiseObserver2.observe(document.querySelector(".advDiv2"))
+        return(() =>{
+            advertiseObserver2.unobserve(document.querySelector(".advDiv2"));
+        })
+    })
+
     return (
-        <ProductAdvertisementDiv2>
+        <ProductAdvertisementDiv2 className="advDiv2"
+            style={{
+                backgroundImage : advertiseState ? "url(https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_bg_with_cup.jpg)" : "",
+                backgroundColor : advertiseState ? "" : "white"
+            }}>
             <BackgroundDivLeft/>
             <BackgroundDivRight/>
             <ProductLogoDiv>
@@ -21,10 +49,10 @@ export default ProductAdvertisement2;
 const ProductAdvertisementDiv2 = styled.div`
     width: 100%;
     height: 400px;
-    background-image: url(https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_bg_with_cup.jpg);
+    /* background-image: url(https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_bg_with_cup.jpg); */
     background-position: 22% 20%;
     position: absolute;
-
+    transition: 2s;
     /* 스타벅스에서는 배경의 좌우 이미지 설정을 이렇게 했었음 혹시 필요하면 사용하기*/  
     /* &::before{
         content: url(https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_bg_left.png);
@@ -37,7 +65,7 @@ const ProductAdvertisementDiv2 = styled.div`
         right:0;
         content: url(https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_bg_right.png);
     } */
-    
+
 `
 
 const BackgroundDivLeft = styled.div`
@@ -48,7 +76,7 @@ const BackgroundDivLeft = styled.div`
     position: absolute;
     left: 0;
     bottom: 0px;
-
+    transition: 2s;
 `
 
 const BackgroundDivRight = styled.div`
@@ -60,8 +88,7 @@ const BackgroundDivRight = styled.div`
     position: absolute;
     right : 0;
     bottom: 0;
-
-
+    transition: 2s;
 `
 
 const ProductLogoDiv = styled.div`
