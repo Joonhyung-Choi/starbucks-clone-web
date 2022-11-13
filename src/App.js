@@ -94,17 +94,12 @@ function App() {
       <PageMainDIv className='pageMainSection' >
         <PageMain />
       </PageMainDIv>
-
       <Notice />
       <StarbucksRewards />
-      <ProductDiv1 className='advertiseSection1' >
-        {/* pageMainState 값을 props로 전달 */}
-        <ProductAdvertisement1 pageMainState={pageMainState}/>
-      </ProductDiv1>
-      <ProductDiv2 className='advertiseSection2' >
-        {/* pageMainState 값을 props로 전달 */}
-        <ProductAdvertisement2 pageMainState={pageMainState}/>
-      </ProductDiv2>
+      {/* pageMainState 값을 props로 전달 */}
+      <ProductAdvertisement1 pageMainState={pageMainState} />
+      {/* pageMainState 값을 props로 전달 */}
+      <ProductAdvertisement2 pageMainState={pageMainState} />
       <ProductAdvertisement3 />
 
 
@@ -123,13 +118,5 @@ const HeaderBackDiv = styled.div`
 const PageMainDIv = styled.div`
 `
 
-const ProductDiv1 = styled.div`
-`
-
-const ProductDiv2 = styled.div`
-`
-
-const ProductDiv3 = styled.div`
-`
 
 export default App;

@@ -12,6 +12,7 @@ function ProductAdvertisement2(){
 export default ProductAdvertisement2;
 
 const ProductAdvertisementDiv3 = styled.div`
+    
     width: 100%;
     height: 1000px;
     background-color: #2c5e8d;

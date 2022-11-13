@@ -15,7 +15,7 @@ const ProductAdvertisement1 = (props) => {
                 setAdvertiseState(true);
                 console.log(advertiseState, 1111)
 
-                // 아래로 내렸다가 다시 올릴때 옵저버가 작동하지 않도록 unobserve 해줌
+                // 아래로 내렸다가 다시 올릴때 옵저버의 상태가 변하지 않도록 unobserve 해줌
                 advertiseObserver1.unobserve(entry.target);
             }
             // 유저가 화면을 위로 올렸고 대상 요소가 관찰되지 않은 상태라면 advertiseState를 false로 바꿈
@@ -29,19 +29,19 @@ const ProductAdvertisement1 = (props) => {
       
      // 처음 렌더링 시 요소가 렌더링 되지 않아 querySelector에 null 값이 들어가는 것을 방지하기 위한 useEffect
     useEffect(() =>{
-        advertiseObserver1.observe(document.querySelector(".advDiv1"));
+        advertiseObserver1.observe(document.querySelector(".advertisementDiv1"));
 
         // 컴포넌트 재렌더링 시 useEffect 내부의 옵저빙 명령이 중복으로 발생하는 것을 막기 위한 unobserve
         // 아래 코드는 컴포넌트가 렌더링 되기 전에 실행됨
         return(() =>{
-            advertiseObserver1.unobserve(document.querySelector(".advDiv1"));
+            advertiseObserver1.unobserve(document.querySelector(".advertisementDiv1"));
         })
     })
 
     
 
     return (
-        <ProductAdvertisementDiv1 className="advDiv1">
+        <ProductAdvertisementDiv1 className="advertisementDiv1">
             <BackgroundDiv1 />
             <BackgroundDiv2 />
             <AdvertiseProductDiv>
