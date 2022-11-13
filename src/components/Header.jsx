@@ -4,6 +4,9 @@ import { useState } from "react";
 
 
 function Header(){
+  const LOGO_IMG_SRC = "https://www.starbucks.co.kr/common/img/common/logo.png";
+  const SEARCH_BUTTON_IMG_SRC = "https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png";
+
 
   const[isClicked, setIsClicked] = useState(false);
   function onClickSerchButton(){
@@ -20,7 +23,7 @@ function Header(){
     <HeaderBlock>
       <HeaderBlockInner>
         <HeaderBlockInnerLogo href="/">
-          <img src="https://www.starbucks.co.kr/common/img/common/logo.png" alt="" />
+          <LogoImg src={LOGO_IMG_SRC} alt="" />
         </HeaderBlockInnerLogo>
         <HeaderTopNav className={isClicked ? 'searchButtonClicked' : ''}>
           <TopNavUl>
@@ -34,7 +37,7 @@ function Header(){
           <InputSerch className={isClicked ? 'searchButtonClicked' : ''} type='text' placeholder="통합검색">
           </InputSerch>
           <SerchButton onClick={onClickSerchButton}>
-            <SerchButtonImg src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png"></SerchButtonImg>
+            <SerchButtonImg src={SEARCH_BUTTON_IMG_SRC}></SerchButtonImg>
           </SerchButton>
         </SerchArea>
         <HeaderBottomNav>
@@ -79,6 +82,10 @@ const HeaderBlockInnerLogo = styled.a`
   top : 22px;
 `
 
+const LogoImg = styled.img`
+  
+`
+
 const HeaderTopNav = styled.nav`
   background: url(https://www.starbucks.co.kr/common/img/common/sdown_util_sep.png) no-repeat;
   position : absolute;
@@ -99,8 +106,7 @@ const TopNavLi = styled.li`
   height : 20px;
   color : #555;
   
-  // font ?냽?꽦 吏??젙?떆 ?룿?듃瑜? ?뿬?윭媛? 吏??젙?빐二쇰㈃ 癒쇱?? ?꽑?뼵?맂(?쇊履쎈???꽣) 湲?瑗댁씠 ?슦?꽑 ?쟻?슜?맖
-  // 留뚯빟 而댄벂?꽣?뿉 湲?瑗댁씠 ?뾾?떎硫? ?떎?쓬 湲?瑗? ?쟻?슜
+
   font : normal 13px Avenir, Arial, georgia;
   &:hover{
     text-decoration: underline;

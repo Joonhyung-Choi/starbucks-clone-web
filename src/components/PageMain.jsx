@@ -5,24 +5,24 @@ import styled from "styled-components";
 
 
 function PageMain() {
-  const sloganImgSrc = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_title.png";
-  const productImgSrc1 = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_drink_02.png";
-  const productImgSrc2 = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_drink_01.png";
-  const productImgSrc3 = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_drink_03.png";
+  const SLOGAN_IMG_SRC = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_title.png";
+  const PRODUCT_IMG_SRC1 = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_drink_02.png";
+  const PRODUCT_IMG_SRC2 = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_drink_01.png";
+  const PRODUCT_IMG_SRC3 = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Halloween_main_drink_03.png";
 
 
   return (
     <PageMainDiv>
       <SloganDiv>
-        <SloganImg src={sloganImgSrc} />
+        <SloganImg src={SLOGAN_IMG_SRC} />
         <MoreInfoDiv>
           <MoreInfoA className="moreInfoA" href="/">자세히 보기</MoreInfoA>
         </MoreInfoDiv>
       </SloganDiv>
       <ProductImgDiv>
-        <ProductImg1 src={productImgSrc1} />
-        <ProductImg2 src={productImgSrc2}/>
-        <ProductImg3 src={productImgSrc3}/>
+        <ProductImg1 src={PRODUCT_IMG_SRC1} />
+        <ProductImg2 src={PRODUCT_IMG_SRC2}/>
+        <ProductImg3 src={PRODUCT_IMG_SRC3}/>
       </ProductImgDiv>
     </PageMainDiv>
   );

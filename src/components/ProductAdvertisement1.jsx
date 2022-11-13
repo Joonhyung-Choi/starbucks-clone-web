@@ -4,6 +4,9 @@ import styled from "styled-components";
 
 const ProductAdvertisement1 = (props) => {
 
+    const ADVERTISE_IMG_SRC = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Autumn_bean_bean.png"
+    const EXPLAIN_IMG_SRC = "https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Autumn_bean_text.png";
+
     // 화면에 ProductAdvertisement1의 요소가 나타났는지를 확인하기 위한 state
     const [advertiseState, setAdvertiseState] = useState(false);
 
@@ -47,12 +50,12 @@ const ProductAdvertisement1 = (props) => {
             <AdvertiseProductDiv>
                 {/* 조건부 스타일링으로 보이지 않던 요소들이 대상 컴포넌트가 관찰되었다면 보이도록 설정 */}
                 <ProductImmageDiv style={{transform : advertiseState ? "" : "translate(-150%,0)" ,opacity : advertiseState ? "" : "0"}}>
-                    <ImmageDivInnerImg src="https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Autumn_bean_bean.png" />
+                    <ImmageDivInnerImg src={ADVERTISE_IMG_SRC} />
                 </ProductImmageDiv>
                 {/* 조건부 스타일링으로 보이지 않던 요소들이 대상 컴포넌트가 관찰되었다면 보이도록 설정 */}
                 <ProductExplainDiv style={{transform : advertiseState ? "" : "translate(200%,0)" ,opacity : advertiseState ? "" : "0"}}>
                     <ExplainInnerDiv>
-                        <ExplainInnerImg src="https://image.istarbucks.co.kr/upload/common/img/main/2022/2022_Autumn_bean_text.png"></ExplainInnerImg>
+                        <ExplainInnerImg src={EXPLAIN_IMG_SRC}></ExplainInnerImg>
                         <ExplainInnerButton href="/">자세히 보기</ExplainInnerButton>
                     </ExplainInnerDiv>
                 </ProductExplainDiv>

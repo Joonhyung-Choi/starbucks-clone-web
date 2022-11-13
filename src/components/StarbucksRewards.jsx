@@ -4,10 +4,12 @@ import styled from "styled-components";
 
 
 function StarbucksRewards(){
+    const REWARDS_IMG_SRC = "https://image.istarbucks.co.kr/common/img/main/rewards-logo.png";
+
     return (
         <StarbucksRewardsMain>
             <RewardsInnerDiv>
-                <RewardsImg src="https://image.istarbucks.co.kr/common/img/main/rewards-logo.png"></RewardsImg>
+                <RewardsImg src={REWARDS_IMG_SRC}></RewardsImg>
                 <RewardsContentsDiv>
                     <RewardContent1Div>
                         <Content1InnerDiv>

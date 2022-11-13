@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 function ProductAdvertisement2(props){
+    const BACKGROUND_IMG_SRC = "https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_bg_with_cup.jpg";
+    const PRODUCT_LOGO_IMG_SRC = "https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_title.png";
 
     const [advertiseState, setAcvertiseState] = useState(false);
     const advertiseObserver2 = new IntersectionObserver((entries)=>{
@@ -29,13 +31,13 @@ function ProductAdvertisement2(props){
     return (
         <ProductAdvertisementDiv2 className="advertisementDiv2">
             <BackgroundImg 
-                src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_bg_with_cup.jpg" 
+                src={BACKGROUND_IMG_SRC} 
                 style={{opacity : advertiseState ? "" : "0"}}    
             />
             <BackgroundDivLeft style={{opacity : advertiseState ? "" : "0"}}/>
             <BackgroundDivRight style={{opacity : advertiseState ? "" : "0"}}/>
             <ProductLogoDiv>
-                <ProductLogoImg src="https://image.istarbucks.co.kr/upload/common/img/main/2022/reserve_2022_rwanda_sholi_title.png"/>
+                <ProductLogoImg src={PRODUCT_LOGO_IMG_SRC}/>
             </ProductLogoDiv>
             <InfoButtonDiv>
                 <InformationButton href="/">자세히 보기</InformationButton>
