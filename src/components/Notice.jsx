@@ -1,38 +1,44 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { IoIosAddCircleOutline, IoIosArrowDropdown} from "react-icons/io"; 
+import { IoIosAddCircleOutline, IoIosArrowDropdown } from "react-icons/io";
 
-
-
+// 공지 컴포넌트
 function Notice() {
+  // 프로모션 버튼의 클릭 상태를 나타내기 위한 state
   const [promotionButton, setPromotionButton] = useState(true);
 
-  function promotionClicked(){
-    if(promotionButton === true){
+  function promotionClicked() {
+    if (promotionButton === true) {
       setPromotionButton(false);
     } else {
       setPromotionButton(true);
     }
   }
 
-  
-
   return (
     <NoticeMainDiv>
       <NoticeDiv>
         <NoticeInnerP>공지사항</NoticeInnerP>
-        <NoticeInnerA className="noticeInnerA" href="/">시스템 개선 및 점검 안내</NoticeInnerA>
+        <NoticeInnerA className="noticeInnerA" href="/">
+          시스템 개선 및 점검 안내
+        </NoticeInnerA>
         <NoticeInnerPlusIcon href="/">
-          <IoIosAddCircleOutline size="45" color="white"></IoIosAddCircleOutline>
+          <IoIosAddCircleOutline
+            size="45"
+            color="white"
+          ></IoIosAddCircleOutline>
         </NoticeInnerPlusIcon>
       </NoticeDiv>
       <PromotionDiv>
-        <PromotionInnerA onClick = {promotionClicked}>
-          <PromotionInnerP>
-            스타벅스 프로모션
-          </PromotionInnerP>
-          <PromotionOpenCloseP >
-            <IoIosArrowDropdown className={promotionButton ? "" : "clickedPromotionButton"} size="45"/>
+        <PromotionInnerA onClick={promotionClicked}>
+          <PromotionInnerP>스타벅스 프로모션</PromotionInnerP>
+          <PromotionOpenCloseP>
+            {/* 프로모션 버튼을 클릭했는지 여부에 따라 클래스명을 다르게 부여 */}
+            {/* 클릭되었다면 버튼을 180도 돌려서 구현 (App.css) */}
+            <IoIosArrowDropdown
+              className={promotionButton ? "" : "clickedPromotionButton"}
+              size="45"
+            />
           </PromotionOpenCloseP>
         </PromotionInnerA>
       </PromotionDiv>
@@ -42,33 +48,28 @@ function Notice() {
 
 export default Notice;
 
-
 const NoticeMainDiv = styled.div`
-    width: 100%;
-    height: 62px;
-    background-color: black;
-`
+  width: 100%;
+  height: 62px;
+  background-color: black;
+`;
 const NoticeDiv = styled.div`
   width: 50%;
   height: 62px;
   float: left;
-  
-
-`
-
-
+`;
 
 const NoticeInnerP = styled.p`
   position: absolute;
-  left : 20%;
+  left: 20%;
   text-align: center;
   display: block;
   color: white;
   width: 100px;
   height: 62px;
-  font : normal 17px Avenir, Arial, georgia;
+  font: normal 17px Avenir, Arial, georgia;
   line-height: 57px;
-`
+`;
 
 const NoticeInnerA = styled.a`
   position: absolute;
@@ -79,11 +80,10 @@ const NoticeInnerA = styled.a`
   width: 200px;
   height: 62px;
   line-height: 60px;
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
-  
-`
+`;
 
 const NoticeInnerPlusIcon = styled.a`
   padding-top: 7px;
@@ -93,7 +93,7 @@ const NoticeInnerPlusIcon = styled.a`
   height: 62px;
   position: absolute;
   left: 51.5%;
-`
+`;
 
 const PromotionDiv = styled.div`
   position: relative;
@@ -101,25 +101,24 @@ const PromotionDiv = styled.div`
   height: 62px;
   background-color: white;
   float: right;
-`
+`;
 
 const PromotionInnerA = styled.a`
   position: absolute;
   width: 100%;
-  font : bold 17px Avenir, Arial, georgia;
+  font: bold 17px Avenir, Arial, georgia;
   line-height: 63px;
   cursor: pointer;
-`
+`;
 
 const PromotionInnerP = styled.p`
   display: block;
   position: absolute;
   right: 60%;
-  
-`
+`;
 const PromotionOpenCloseP = styled.p`
   display: block;
   position: absolute;
-  right : 49%;
+  right: 49%;
   padding-top: 8px;
-`
+`;
